@@ -15,9 +15,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Telegram API credentials
-api_id = api_id
-api_hash = 'telegram_api'
-phone = 'phone_number'
+api_id = 25137965
+api_hash = '5b75b63d388dc496776c90b42da6f4e6'
+phone = '+251967909687'
 
 # Ethiopian Telegram e-commerce channels
 channels = [
@@ -69,7 +69,7 @@ async def fetch_telegram_messages(client, accessible_channels):
     for channel in accessible_channels:
         try:
             channel_messages = []
-            async for message in client.iter_messages(channel, limit=100):  # Increased limit
+            async for message in client.iter_messages(channel, limit=250):  # Increased limit
                 msg_data = {
                     'channel': channel,
                     'sender': message.sender_id if message.sender_id else 0,
