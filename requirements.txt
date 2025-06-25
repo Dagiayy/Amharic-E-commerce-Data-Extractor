@@ -3,3 +3,6 @@ tesserocr
 pillow
 pandas
 nltk
+torchvision
+shap
+lime
